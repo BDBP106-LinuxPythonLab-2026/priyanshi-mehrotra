@@ -1,0 +1,44 @@
+que2 (1) rw-r--r-- 1 user user 0 Aug 6 10:30 newfile
+explanation:
+- → Regular file
+rw- → Owner: Read and Write 
+r-- → Group: Read only 
+r-- → Others: Read only
+
+que 2 (2)
+0002
+explanation
+The default permission for files is 666 (rw-rw-rw-).
+The default permission for directories is 777 (rwxrwxrwx).
+umask 022 removes write permission for group and others.
+file start with 666
+666-0222=644
+777-022=755
+
+que2(3)
+-rw-r--r-- 1 user user 0 Aug 6 10:35 file1
+Owner = rw- = 6
+Group = r-- = 4
+Others = r-- = 4
+
+Octal: 644
+
+que2(4)
+drwxr-xr-x 2 user user 4096 Aug 6 10:36 dir1
+Owner = rwx = 7
+Group = r-x = 5
+Others = r-x = 5
+Octal: 755
+
+que2(5)
+yes the copied file usually has the same permission as original 
+
+que2(6)
+chmod u=rwx,g=rw,o=r dir1
+Owner = rwx = 7
+Group = rw- = 6
+Others = r-- = 4
+
+que2(7)
+(mv) within the same filesystem simply changes the file's location (and optionally its name). The file retains the same permissions.
+
