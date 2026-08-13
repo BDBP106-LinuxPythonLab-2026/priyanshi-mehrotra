@@ -1,0 +1,8 @@
+echo "calculating energy-mass equivalence"
+
+bc <<EOF
+m=1
+c=3*10^8
+e=m*c*c
+
+EOF
